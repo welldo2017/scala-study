@@ -4,46 +4,45 @@ package com.welldo.scalaStudy.chapter4.whileDemo
   * author: welldo 
   * date: 2019/11/17 18:16
   *
-  * Scala内置控制结构 特地 去掉了break和continue，
-  * 是为了更好的适应函数化编程，
-  * 推荐使用函数式的风格解决break和contine的功能，而不是一个关键字
-  *
-  * 如何捕获异常呢?
-  * def breakable(op: => Unit) {
-  *   try {
-  *     op
-  *   } catch {
-  *     case ex: BreakControl =>
-  *     if (ex ne breakException) throw ex
-  *   }
-  * }
-  *
-  * breakable 是一个函数，而且是一个高阶函数
-  * 在scala中 高阶函数就是可以接收函数作为参数的函数，而且还可以返回函数
+  * 20以内的数求和，求出 当和 第一次大于20的当前数是多少?
+  * 请使用循环守卫和breakable，完成break的效果
   */
+
 import scala.util.control.Breaks._
-object WhileBreak2 {
+
+object WhileBreakExercise {
 
   def main(args: Array[String]): Unit = {
 
+    //方法1: 普通方法, 使用break() 进行中断
+    var sum = 0
     breakable {
-      //打印1-20, 但是10以后不要打印..
-      var num = 0
-      while (num < 20) {
-        num += 1
-        printf("index = %d\n", num)
-
-        if (num > 10) {
-          //如果按照java的习惯, 写上break即可.但是scala中没有break
-          //但是有break()方法, (需要导包 import  util.control.Breaks._)
-          //看源码, 它会直接抛出异常, 如果异常没有被捕获, 那么最后一行代码肯定无法正常执行
-          //如何捕获异常呢?
-          break();
+      for (elem <- 1 to 20) {
+        sum += elem
+        if (sum > 20) {
+          printf("累计求和第一次大于20的当前数是%d \n", elem)
+          break()
         }
       }
     }
 
-    println("正常结束")
+    println("==============================")
+    //方法2: 循环守卫
+    var sum2 = 0
+    var loop = true
+    for (elem <- 1 to 20 if loop) {
+      sum2 += elem
+      if (sum2 > 20) {
+        printf("累计求和第一次大于20的当前数是%d \n", elem)
+        loop = false
+      }
+
+      //elem =6 的时候, 累计和就超过20了, 那么 6以后的循环, 还会进来空转吗?
+      //不会的,编译器很聪明的, 我们可以用下面这行代码进行验证
+      println(elem)
+    }
+
+
   }
 
 

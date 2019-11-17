@@ -3,29 +3,41 @@ package com.welldo.scalaStudy.chapter4
 /**
   * author: welldo 
   * date: 2019/11/17 16:17
+  *
+  * 循环守卫 和 引入变量
   */
-object ForDemo {
+object ForDemo2 {
 
   /**
-    * 1) i 表示要循环的变量，
-    * 2) <- 表示把 集合中的值,依次交给前面的变量
-    *
-    * 3) to 是关键字,   x to y,表示从x到y ,左闭右闭
-    *   until 是关键字, x to y,表示从x到y ,左闭右开
-    *
-    * 4) i将会从 1开始循环,到3结束
-    * 5) 这里的 1 to 3 也可以是一个集合
+    * 1)循环守卫，即循环保护式（也称条件判断式，守卫）。
+    * 保护式为true则进入循环体内部，为false则跳过，类似于continue
     */
   def main(args: Array[String]): Unit = {
 
-    //左闭右闭
-    for (i <- 1 to 5) {
-      println("to: " + i)
+    println("循环守卫的方式=================")
+    for(i <- 1 to 3 if i != 2) {
+      println("守卫: "+ i )
     }
 
-    //左闭右开
-    for (i <- 1 until  5) {
-      println("until: " + i)
+    //等价于这种
+    println("普通方式=================")
+    for (i<-1 to 3){
+      if ( i != 2) {
+        println("普通: "+ i )
+      }
+    }
+
+
+    //引入变量
+    println("引入变量=================")
+    for(i <- 1 to 3; j = 4 - i) {
+      println("引入变量: "+ j )
+    }
+
+    //等价于这种
+    for (i <- 1 to 4) {
+      val j = 4 - i
+      println(s"i=${i} j=${j}")
     }
 
 

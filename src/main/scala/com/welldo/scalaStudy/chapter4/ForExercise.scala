@@ -4,29 +4,39 @@ package com.welldo.scalaStudy.chapter4
   * author: welldo 
   * date: 2019/11/17 16:17
   *
-  * 循环时控制步长
+  * 练习题1: 打印1~100之间所有是9的倍数的整数的个数及总和
+  *
+  * 练习2: 打印出下列的语句
+  * 0 + 6 = 6
+  * 1 + 5 = 6
+  * 2 + 4 = 6
+  * *********
+  * *********
+  * 6 + 0 = 6
   */
-object ForDemo5{
+object ForExercise {
 
   def main(args: Array[String]): Unit = {
 
-    //默认, 步长为1
-    for (elem <- 1 to 10) {
-      print(elem+", ")
+    //1. 使用循环守卫的方式
+    var sum = 0
+    var count = 0
+    for (elem <- 1 to 100; if elem % 9 == 0) {
+      sum += elem
+      count += 1
+    }
+    println(sum)
+    println(count)
+
+
+    //2. 使用引入变量的方式
+    val start = 0
+    val end = 6
+
+    for (elem <- start to end; j = end - elem) {
+      println(elem + "+" + j + "=" + (elem + j))
     }
 
-    println()
-    //步长为3, range方式
-    //特别注意: 这个range 相当于until
-    for (elem <- Range(1,10,3)) {
-      print(elem+", ")
-    }
-
-    println()
-    //步长为3, for循环守卫方式: if i % 3 == 1
-    for (elem <- 1 to 10; if elem %3 ==1) {
-      print(elem+", ")
-    }
 
 
   }

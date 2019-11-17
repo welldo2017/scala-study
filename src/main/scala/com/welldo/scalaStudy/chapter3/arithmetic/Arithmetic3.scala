@@ -1,4 +1,4 @@
-package com.welldo.scalaStudy.chapter3
+package com.welldo.scalaStudy.chapter3.arithmetic
 
 /**
   * @author welldo 

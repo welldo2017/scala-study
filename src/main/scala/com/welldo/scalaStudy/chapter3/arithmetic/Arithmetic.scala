@@ -1,4 +1,4 @@
-package com.welldo.scalaStudy.chapter3
+package com.welldo.scalaStudy.chapter3.arithmetic
 
 /**
   * @author welldo 
@@ -7,8 +7,8 @@ package com.welldo.scalaStudy.chapter3
   *         运算符是一种特殊的符号，用以表示数据的运算、赋值和比较等。
   *         1)算术运算符
   *
-  *         3)比较运算符(关系运算符), 最后返回boolean
-  *         4)逻辑运算符【与，或，非】,最后返回boolean
+  *         3)比较运算符(关系运算符), 最后返回boolean,不举例
+  *         4)逻辑运算符【与，或，非】,最后返回boolean,不举例
   *
   *         2)赋值运算符
   *         5)位运算符 (位运算 ~  |   >> << >>>...)

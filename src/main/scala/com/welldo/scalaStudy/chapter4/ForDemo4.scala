@@ -3,28 +3,30 @@ package com.welldo.scalaStudy.chapter4
 /**
   * author: welldo 
   * date: 2019/11/17 16:17
+  *
+  * 循环返回值
+  * 将遍历过程中处理的结果, 放到一个Vector集合中(indexedSeq[T])
+  * yield 后可以跟上代码块
   */
-object ForDemo3 {
+object ForDemo4 {
 
-  /**
-    * 循环嵌套
-    */
   def main(args: Array[String]): Unit = {
 
-    //这个无法处理复杂的业务
-    println("嵌套循环=================")
-    for(i <- 1 to 3; j <- 1 to 3) {
-      println(" i =" + i + " j = " + j)
-    }
+    val res = for (i <- 1 to 10) yield i
+    println(res)
 
+    val res2 = for (i <- 1 to 10) yield i * 2
+    println(res2)
 
-    //复杂的业务时,推荐使用这个
-    println("普通方式=================")
-    for (i <- 1 to 3) {
-      for (j <-1 to 3) {
-        println(" i =" + i + " j = " + j)
+    //yield 后可以跟上代码块
+    val res3 = for (i <- 1 to 10) yield {
+      if (i % 2 == 0) {
+        i
+      } else {
+        "不是偶数"
       }
     }
+    println(res3)
 
 
   }

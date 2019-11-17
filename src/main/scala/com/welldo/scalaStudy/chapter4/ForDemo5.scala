@@ -4,29 +4,29 @@ package com.welldo.scalaStudy.chapter4
   * author: welldo 
   * date: 2019/11/17 16:17
   *
-  * 循环返回值
-  * 将遍历过程中处理的结果, 放到一个Vector集合中(indexedSeq[T])
-  * yield 后可以跟上代码块
+  * 循环时控制步长
   */
-object ForDemo4 {
+object ForDemo5{
 
   def main(args: Array[String]): Unit = {
 
-    val res = for (i <- 1 to 10) yield i
-    println(res)
-
-    val res2 = for (i <- 1 to 10) yield i * 2
-    println(res2)
-
-    //yield 后可以跟上代码块
-    val res3 = for (i <- 1 to 10) yield {
-      if (i % 2 == 0) {
-        i
-      } else {
-        "不是偶数"
-      }
+    //默认, 步长为1
+    for (elem <- 1 to 10) {
+      print(elem+", ")
     }
-    println(res3)
+
+    println()
+    //步长为3, range方式
+    //特别注意: 这个range 相当于until
+    for (elem <- Range(1,10,3)) {
+      print(elem+", ")
+    }
+
+    println()
+    //步长为3, for循环守卫方式: if i % 3 == 1
+    for (elem <- 1 to 10; if elem %3 ==1) {
+      print(elem+", ")
+    }
 
 
   }

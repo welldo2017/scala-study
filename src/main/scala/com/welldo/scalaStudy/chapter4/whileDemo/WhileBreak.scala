@@ -9,7 +9,7 @@ package com.welldo.scalaStudy.chapter4.whileDemo
   * 推荐使用函数式的风格解决break和contine的功能，而不是一个关键字
   */
 import  util.control.Breaks._
-object WhileDemo {
+object WhileBreak {
 
   def main(args: Array[String]): Unit = {
 
@@ -20,9 +20,13 @@ object WhileDemo {
       printf("index = %d\n",num)
 
       if(num >10 ){
-        break()
+        //如果按照java的习惯, 写上break即可.但是scala中没有break
+        //但是有break()方法, (需要导包 import  util.control.Breaks._)
+        break();
       }
     }
+
+    println("正常结束")
 
   }
 
