@@ -5,6 +5,14 @@
 ****************************************
 
 ========================================
+安装成功之后,进行设置
+git config --global user.name "Your Name"
+git config --global user.email "你的邮箱"
+
+查看是否设置成功
+git config --global user.email 
+
+========================================
 查看所有分支:(当前分支前, 会标一个*号)
 	git branch (只有完成第一次提交之后, 才能看到master分支)
 
