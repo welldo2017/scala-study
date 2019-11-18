@@ -12,6 +12,11 @@ git config --global user.email "你的邮箱"
 查看是否设置成功
 git config --global user.email 
 
+本地Git仓库和GitHub仓库之间的传输是通过SSH加密的
+所以,需要创建ssh key .在用户主目录下，看看有没有.ssh目录
+如果没有, 则用下列命令进行创建
+ssh-keygen -t rsa -C 你的邮箱
+
 ========================================
 查看所有分支:(当前分支前, 会标一个*号)
 	git branch (只有完成第一次提交之后, 才能看到master分支)
