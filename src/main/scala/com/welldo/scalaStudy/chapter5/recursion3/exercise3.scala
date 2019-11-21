@@ -1,4 +1,4 @@
-package com.welldo.scalaStudy.chapter5.recursion
+package com.welldo.scalaStudy.chapter5.recursion3
 
 /**
   * 有一堆桃子，猴子第一天吃了其中的一半，并再多吃了一个！

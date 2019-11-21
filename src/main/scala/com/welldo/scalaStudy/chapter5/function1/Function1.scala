@@ -1,4 +1,4 @@
-package com.welldo.scalaStudy.chapter5
+package com.welldo.scalaStudy.chapter5.function1
 
 /*
   * 1)在scala中，方法和函数几乎可以等同(比如他们的定义、使用、运行机制都一样的)，

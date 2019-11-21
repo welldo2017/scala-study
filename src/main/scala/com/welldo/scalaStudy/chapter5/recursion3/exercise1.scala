@@ -1,4 +1,4 @@
-package com.welldo.scalaStudy.chapter5.recursion
+package com.welldo.scalaStudy.chapter5.recursion3
 
 /**
   * 练习1:
