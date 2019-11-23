@@ -1,4 +1,4 @@
-package com.welldo.scalaStudy.chapter6
+package com.welldo.scalaStudy.chapter6.introduction0
 
 /**
   * 1)属性的定义语法同变量，

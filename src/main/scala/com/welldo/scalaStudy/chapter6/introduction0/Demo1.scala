@@ -1,4 +1,4 @@
-package com.welldo.scalaStudy.chapter6
+package com.welldo.scalaStudy.chapter6.introduction0
 
 /**
   * 基本语法

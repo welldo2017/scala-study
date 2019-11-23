@@ -1,4 +1,4 @@
-package com.welldo.scalaStudy.chapter6
+package com.welldo.scalaStudy.chapter6.introduction0
 
 /**
   * 如果在定义属性时，暂时不赋值时,使用符号_(下划线)，

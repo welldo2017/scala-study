@@ -1,4 +1,4 @@
-package com.welldo.scalaStudy.chapter4
+package com.welldo.scalaStudy.chapter4.ForDemo
 
 /**
   * author: welldo 
