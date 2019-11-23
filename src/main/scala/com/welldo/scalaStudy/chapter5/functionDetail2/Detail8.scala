@@ -24,10 +24,7 @@ object Detail8 {
       println("hi from main")
     }
 
-
-
     sayHi()
-
   }
 
   def sayHi(): Unit ={
