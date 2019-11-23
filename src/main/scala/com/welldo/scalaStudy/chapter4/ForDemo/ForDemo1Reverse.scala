@@ -1,7 +1,8 @@
 package com.welldo.scalaStudy.chapter4.ForDemo
 
 /**
-  * 反转
+  * 反转 reverse 方法
+  *
   * author: welldo 
   * date: 2019/11/23 18:27
   */

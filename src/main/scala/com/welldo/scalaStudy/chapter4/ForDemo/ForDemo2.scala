@@ -1,10 +1,10 @@
 package com.welldo.scalaStudy.chapter4.ForDemo
 
 /**
-  * author: welldo 
-  * date: 2019/11/17 16:17
-  *
   * 循环守卫 和 引入变量
+  *
+  * author: welldo
+  * date: 2019/11/17 16:17
   */
 object ForDemo2 {
 

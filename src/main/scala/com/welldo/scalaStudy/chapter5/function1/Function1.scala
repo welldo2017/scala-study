@@ -4,6 +4,8 @@ package com.welldo.scalaStudy.chapter5.function1
   * 1)在scala中，方法和函数几乎可以等同(比如他们的定义、使用、运行机制都一样的)，
   * 只是函数的使用方式更加的灵活多样  [方法转函数]。
   *
+  * 在类中定义的函数即是方法。
+  *
   * 函数:function -> 函数式编程
   * 方法: method -> oop编程
   *
