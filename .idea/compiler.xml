@@ -9,5 +9,8 @@
         <module name="scala-study" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="scala-study" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

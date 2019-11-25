@@ -30,8 +30,8 @@ object ConstructDemo2 {
     println(wang5)
 
     //编译时不会报错, 但是运行时会报错
-    val personPrivate = new PersonPrivate()
-    println(personPrivate)
+//    val personPrivate = new PersonPrivate()
+//    println(personPrivate)
   }
 }
 /**
