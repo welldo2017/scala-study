@@ -36,8 +36,10 @@ object Hello {
 	Scala 代码中的 Object xxx 对应的是 xxx$的一个静态对象 MODULE$
 	并在在整个运行过程中, 是单例 
 
-4. 编译后为什么有两个文件?
-	
+4. 一个object A, 编译后为什么有两个 class文件?
+	在java中, 有些不是oop(面向对象)的范畴, 比如8种基本数据类型, 比如静态.
+
+
 
 
 
