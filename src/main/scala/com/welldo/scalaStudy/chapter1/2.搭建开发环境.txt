@@ -1,0 +1,11 @@
+
+
+暂无, 后续添加
+
+1. Windows下搭建Scala开发环境
+
+
+2. Linux下搭建Scala开发环境
+
+
+3. 在idea 中安装scala插件的步骤

@@ -1,0 +1,9 @@
+1.1why is Scala语言?
+1)Spark—新一代内存级大数据计算框架，是大数据的重要内容。
+2)Spark就是使用Scala编写的。因此为了更好的学习Spark, 需要掌握Scala这门语言。
+【海量数据的采集，存储，计算分析【mapreduce,Spark】/ [java,python,scala主力]】
+3)Scala 是 Scalable Language 的简写，是一门多范式的编程语言
+多范式: 编程的方式, 比如 面向对象编程,函数式编程
+Scala就是 面向对象+函数式
+4)联邦理工学院洛桑（EPFL ）的Martin Odersky于2001/2003推出 年开始设计Scala
+5)Spark的兴起，带动Scala语言的发展！

@@ -1,0 +1,68 @@
+
+
+1)用文本编辑工具, 新建一个 Hello.scala 的文件中,  编写如下的scala代码
+object Hello {
+	def main(args: Array[String]):Unit = {
+		println("hello, scala世界!")
+	}
+}
+
+
+3.1) 先编译
+	通过 scalac + 文件名 命令对该 scala 文件进行编译，命令为:scalac Hello.scala
+	生成字节码文件(.class文件)。[和javac类似]
+
+
+3.2)再执行 
+	通过scala + 对象名 命令(此文件中的对象是 Hello),就运行这段代码。
+
+
+4)注意：scala  Hello.scala 命令可以直接运行这段代码 [内部也会有编译和运行过程]
+	但是你能注意到, 速度明显慢了很多
+
+
+
+//简单分析
+//1. object 是一个关键字，表示一个伴生对象
+//2. 如果该文件中, 只出现了一个object, 就会在编译后两个.class文件;
+	(如果出现 N 个object, 就会出现 N*2 个.class文件)
+//3. 第1个文件是 Hello.class, 这个表示他的伴生类，但是空的.
+//4. 第2个文件是 Hello$.class, 对应的是object 
+	HelloScala,但是本质是调用它对应的一个静态属性 MODULE$
+//5. 这两个文件的关系和main函数的入口关系
+
+
+
+// 简单分析
+object HelloScala {
+	// 1. def 表示一个方法或者一个函数
+	// 2. main 表示入口, 主方法.
+	// 3. args: Array[String] 表示形参，args 是形参名, Array[String] 是形参类型,
+	// 4. :Unit  表示返回值类型为 Unit ，等价于java 的void
+	// 5. = 表示 后面写的是函数体/方法体, 它还有返回值类型推导的作用
+	def main(args: Array[String]):Unit = {
+	      // 在scala 语句后，不需要带;
+		println("hello, scala世界!")
+	}
+}
+
+
+==============================================
+Q:使用 scala 程序跑 javac编译器 生成的.class, 可以吗? 
+A:可以, 因为scala包含范围比java大
+
+
+Q:使用 java 程序跑 scalac 编译器生成的 .class, 可以吗? 
+A:不可以, 
+
+
+
+
+
+
+
+
+
+
+
+
