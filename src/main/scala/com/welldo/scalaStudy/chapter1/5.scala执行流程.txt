@@ -1,0 +1,55 @@
+
+1.用文本编辑工具, 新建一个 Hello.scala 的文件中,  编写如下的scala代码
+object Hello {
+	def main(args: Array[String]):Unit = {
+		println("hello, scala世界!")
+	}
+}
+
+
+2. 使用scalac 命令对此文件进行编译, 生成两个文件: Hello$ 和 Hello
+
+3. 使用反编译工具, 对这两个文件进行反编译.
+
+	//** Hello的主方法, 仅仅是一个入口, 调用了真正的Hello$ 的main方法
+	public final class Hello{
+	    public static void main(String[] paramArrayOfString)    {
+	        Hello$.MODULE$.main(paramArrayOfString);
+	    }
+	}
+
+
+	//** MODULE$ 是 Hello$的一个对象;
+	final class Hello${
+	    public static final Hello$ MODULE$;
+	    static    {
+	        MODULE$ = new Hello$();
+		}
+
+	    public void main(String[] args)    {
+	        System.out.println("hello,scala!~~~~~~ 模拟");
+	    }
+	    //private Hello$() { MODULE$ = this; }
+	}
+
+	从上面可以看出:
+	Scala 代码中的 Object xxx 对应的是 xxx$的一个静态对象 MODULE$
+	并在在整个运行过程中, 是单例 
+
+4. 编译后为什么有两个文件?
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
