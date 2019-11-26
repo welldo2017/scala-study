@@ -1,4 +1,4 @@
-package com.welldo.scalaStudy.chapter3.arithmetic
+package com.welldo.scalaStudy.chapter3.arithmetic1
 
 /**
   * @author welldo 
@@ -12,10 +12,10 @@ object Arithmetic3 {
   def main(args: Array[String]): Unit = {
     var i = 10
 
-    i += 1  //i++ 没有了
+    i += 1  //i = i+1
     println(i)
 
-    i -= 1  //i-- 没有了
+    i -= 1  //i = i-1
     println(i)
 
   }

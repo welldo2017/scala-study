@@ -39,7 +39,6 @@ object TypeDemo4 {
     val charMax = Char.MaxValue
     println(charMax.toInt)
 
-
   }
 
   /**
@@ -58,13 +57,5 @@ object TypeDemo4 {
     var char4 :Char = 97          //正确, 可以给Char赋一个整数(只判断是否范围越界),此时不越界
     //var char5 :Char = 99999       //错误, 可以给Char赋一个整数(只判断是否范围越界),此时越界
 
-
-
-
-
-
   }
-
-
-
 }
