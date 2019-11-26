@@ -1,10 +1,11 @@
-package com.welldo.scalaStudy.chapter3.assign
+package com.welldo.scalaStudy.chapter3.assign4
 
 /**
   * @author welldo 
   *  2019/11/17
   *
   *  赋值运算符
+  * 0. =	简单的赋值运算, 左边可以是值, 也可以是代码块
   * 1. +=  相加后再赋值 c += 10,等于 c= c+10
   * 2. -=  相减后再赋值
   * 3. *=  相乘后再赋值
@@ -17,6 +18,7 @@ package com.welldo.scalaStudy.chapter3.assign
   *
   * 8. &=  按位与后 赋值 (不懂)
   * 9. |=  按位或后 赋值(不懂)
+  * 10. 按位异或 后  赋值(不懂)
   */
 object Demo1 {
 

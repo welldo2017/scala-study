@@ -1,10 +1,9 @@
-package com.welldo.scalaStudy.chapter3.assign
+package com.welldo.scalaStudy.chapter3.assign4
 
 /**
-  * @author welldo 
+  * 赋值运算符
+  * @author welldo
   *         2019/11/17
-  *
-  *         赋值运算符
   */
 object Demo2 {
 

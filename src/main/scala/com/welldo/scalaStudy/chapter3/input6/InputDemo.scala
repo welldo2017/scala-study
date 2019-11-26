@@ -1,4 +1,4 @@
-package com.welldo.scalaStudy.chapter3.input
+package com.welldo.scalaStudy.chapter3.input6
 
 import scala.io.StdIn
 
