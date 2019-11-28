@@ -12,11 +12,8 @@ package com.welldo.scalaStudy.chapter5.functionDetail2
 object Detail6 {
 
   def main(args: Array[String]): Unit = {
-
     println(test())
     println(test1())
-
-
   }
 
   def test(): Unit ={

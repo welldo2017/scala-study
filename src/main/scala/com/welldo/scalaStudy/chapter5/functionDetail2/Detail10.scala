@@ -50,7 +50,7 @@ object Detail10 {
   def test(p1:Int = 1, p2:Int): Unit ={
     println(p1 + "---" +p2)
 
-    //scala 函数的形参默认是val的，因此不能在函数中进行修改.
+    //11. scala 函数的形参默认是val的，因此不能在函数中进行修改.
     //p1 =10
 
   }

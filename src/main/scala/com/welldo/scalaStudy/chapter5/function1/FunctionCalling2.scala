@@ -10,7 +10,7 @@ package com.welldo.scalaStudy.chapter5.function1
   * author: welldo 
   * date: 2019/11/17 19:26
   */
-object Function2 {
+object FunctionCalling2 {
 
   def main(args: Array[String]): Unit = {
     val n1 = 1
