@@ -1,0 +1,22 @@
+
+创建对象的流程, 了解即可
+
+案例
+class Person {
+  var age: Short = 90
+  var name: String = _
+  def this(n: String, a: Int) {
+    this()
+    this.name = n
+    this.age = a
+  }}
+var p : Person = new Person("小倩",20)
+
+
+Scala对象创建对象流程分析(面试题-写出)
+1)加载类的信息(属性信息和方法信息)
+2)在内存中(堆)给对象开辟空间
+3)使用父类的构造器(主构造器/辅助构造器)完成父类的初始化 (多个父类)
+4)使用本类的主构造器完成初始化( age = 90 name = "null")
+5)使用本类的辅助构造器继续初始化(age =20,name = "小倩")
+6)将对象在内存中的地址赋给 p 这个引用

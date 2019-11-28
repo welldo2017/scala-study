@@ -8,6 +8,11 @@ import scala.beans.BeanProperty
   * 将Scala字段加@BeanProperty时，这样会自动生成规范的 setXxx/getXxx 方法。
   * 这时可以使用 对象.setXxx() 和 对象.getXxx() 来调用属性。
   *
+  * 之前的
+  * 赋值方式:对象.属性 = xxx
+  * 取值方式: 对象.属性
+  * 仍然有效, 不会冲突
+  *
   * author: welldo
   * date: 2019/11/23 19:21
   */
@@ -19,7 +24,6 @@ object ConstructDemo4 {
 
     car.setName("路虎")
     println(car.getName)
-
   }
 }
 
