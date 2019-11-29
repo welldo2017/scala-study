@@ -45,5 +45,5 @@
 >第16章 并发编程模型-AKKA
 
 ****
-有收获可以请作者喝咖啡
-![image](https://github.com/welldo2017/scala-study/blob/master/images/myAliPay.jpg)
+##### 有收获可以请作者喝咖啡
+<img width="180px" src="https://github.com/welldo2017/scala-study/blob/master/images/myAliPay.jpg"/>
