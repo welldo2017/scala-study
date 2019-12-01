@@ -1,4 +1,4 @@
-package com.welldo.scalaStudy.chapter7.scalaPackage2
+package com.welldo.scalaStudy.chapter7.packageName2
 
 /**
   * 命名规则
@@ -12,6 +12,6 @@ package com.welldo.scalaStudy.chapter7.scalaPackage2
   * @author welldo
   *  2019/11/28
   */
-object Demo {
+object NameDemo {
 
 }
