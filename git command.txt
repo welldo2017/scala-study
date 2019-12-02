@@ -127,7 +127,7 @@ bug分支
 	dev分支开发了一半, 不能提交, mater出现了一个bug,需要先修复;
 	所以,需要先把dev分支储藏起来:
 		git stash
-	stash后, status工作区, 就是一个干净的dev(和'刚从master上创建dev时一样')
+	stash后, 工作区就是一个干净的dev(和'刚从master上创建dev'时一样)
 	假如需要在master上修复bug,就从master上创建临时分支: fixbug
 	修复完后, 提交 ,返回一个提交号码:比如 4c805e2 *****请记住返回的提交号码
 	(然后切换到master, 删除fixbug分支)

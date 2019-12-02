@@ -12,8 +12,8 @@ package com.welldo.scalaStudy.chapter5.lazyFunction4
   * 注意事项:
   *   lazy 不能修饰 var 类型的变量, 只能修饰 val
   *   lazy修饰函数 ,会导致函数的执行被推迟;
-  *   lazy修饰变量 ,那么变量值得分配也会推迟。
-  *     比如 lazy val i = 10, 其实这里并没有真正赋值, 只有当被使用的时候 才会被赋值
+  *   lazy修饰变量 ,那么变量值的分配也会推迟。
+  *   比如 lazy val i = 10, 其实这里并没有真正赋值, 只有当 变量i 被使用的时候 才会被赋值
   *
   * author: welldo
   * date: 2019/11/23 14:39
