@@ -2,10 +2,6 @@ package com.welldo.scalaStudy.chapter7.visit5
 
 /**
   * 在Java中，访问权限分为: public，private，protected和默认。
-  * 在Scala中，你可以通过类似的修饰符达到同样的效果。
-  * 但是使用上有区别
-  *
-  *
   *
   * Scala中包的可见性和访问修饰符的使用
   * 1)当属性访问权限为默认时，从底层看, 属性是private的，
@@ -13,11 +9,11 @@ package com.welldo.scalaStudy.chapter7.visit5
   *
   * 2)当方法访问权限为默认时，默认为public访问权限
   *
-  * 3)private为私有权限，只在类的内部和伴生对象中可用 【案例演示 见PreVisit0】
+  * 3)private时，只在本类和伴生对象中可用 【案例演示 见PreVisit0】
   *
   * 4)protected为受保护权限，scala中受保护权限比Java中更严格，只能子类访问
   *
-  * 5)在scala中没有public关键字,即不能用public显式的修饰属性和方法。
+  * 5)在scala中没有public关键字
   *
   * 6)小结  * scala设计者将访问的方式分成三大类:
   * (1) 处处可以访问--public(默认)

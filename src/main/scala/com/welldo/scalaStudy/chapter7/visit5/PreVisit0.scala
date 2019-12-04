@@ -37,6 +37,7 @@ object PreVisit0 {
 
 }
 
+//伴生类
 class PreVisit0 {
   //var name , 底层 name是private ,但是会提供两个public方法 name name_$eq, 处处可用
   var name: String = "jack"
@@ -57,7 +58,7 @@ class PreVisit0 {
   }
 }
 
-
+//非伴生类
 object notPreVisit0 {
   def main(args: Array[String]): Unit = {
     //3. 非伴生对象, 不可以访问私有属性
