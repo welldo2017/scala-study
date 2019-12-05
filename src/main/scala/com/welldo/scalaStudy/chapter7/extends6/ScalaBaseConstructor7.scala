@@ -15,6 +15,7 @@ package com.welldo.scalaStudy.chapter7.extends6
   */
 object ScalaBaseConstructor7 {
   def main(args: Array[String]): Unit = {
+    //scala会先构建父类部分
     new Emp5()
   }
 }
