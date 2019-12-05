@@ -7,7 +7,6 @@ package com.welldo.scalaStudy.chapter7.extends6;
  * (显式或者隐式调用)。
  *
  * 2)java的子类可以指定使用父类的哪个构造器完成初始化. 如果不指定,则使用无参构造器
- * sdfsdjjjsdfasd
  *
  * @author welldo
  * @date 2019/12/4

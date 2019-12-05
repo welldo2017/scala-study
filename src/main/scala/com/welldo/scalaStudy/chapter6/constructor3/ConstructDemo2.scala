@@ -29,7 +29,7 @@ object ConstructDemo2 {
     val wang5 = new Person2("wang5",20)
     println(wang5)
 
-    //编译时不会报错, 但是运行时会报错
+    //调用private构造器, 编译时不会报错, 但是运行时会报错
 //    val personPrivate = new PersonPrivate()
 //    println(personPrivate)
   }
@@ -41,13 +41,15 @@ class Person2() {
   var name: String = _
   var age: Int = _
 
+  //构造器1
   def this(name : String) {
     this()  //直接调用主构造器
     this.name = name
   }
 
+  //构造器2
   def this(age : Int) {
-    this("匿名") //简介调用主构造器,因为 def this(name : String) 中调用了主构造器!
+    this("匿名") //间接调用主构造器,因为 这里调用构造器1, 构造器1中调用了主构造器!
     this.age = age
   }
 
