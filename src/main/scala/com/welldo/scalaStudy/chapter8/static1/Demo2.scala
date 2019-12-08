@@ -9,6 +9,10 @@ package com.welldo.scalaStudy.chapter8.static1
   * 4. 对于半生对象的属性/方法, 可以直接通过对象名来调用
   *         调用时,在底层,是直接调用半生对象, 暂时没有和半生类发生关联
   *
+  * 5. 从底层原理看，伴生对象实现静态特性是依赖于 public static final  MODULE$ 实现的。
+  *
+  * 6. 图标,会变成一半蓝色, 一半黄色的图标
+  *
   * author: welldo
   * date: 2019/12/8 15:20
   */
@@ -25,18 +29,22 @@ object Demo2 {
 class ScalaPerson {}
 
 /**
-  * 反编译后,我们可以看出,  * showName() 这个方法被编译在 ScalaPerson.class中
-  * 方法体为:
-  * public static void showName(){
-  *     ScalaPerson$.MODULE$.showName()
-  * }
+  * 反编译后,我们可以看到, ScalaPerson$中生成的, 仍然是普通的属性和方法,不是static
+  * 那到底是如何实现静态的呢?
+  * 从底层原理看，伴生对象实现静态特性是依赖于 public static final  MODULE$ 实现的。
+  * MODULE$ 是ScalaPerson$的一个静态实例  * 通过这个静态对象来调用 属性和方法.
   *
-  * MODULE$ 是ScalaPerson$的一个静态实例
+  * 那么,调用的入口在哪里呢?
+  * showName() 方法,在 ScalaPerson.class中会生成 如下:
+  *     public static void showName(){
+  *         ScalaPerson$.MODULE$.showName()
+  *     }
+  *
   */
 object ScalaPerson {
-    var name:String ="zhang3"
+    var name: String = "zhang3"
 
-    def showName ()={
+    def showName() = {
         println(name)
     }
 }
