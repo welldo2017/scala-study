@@ -20,6 +20,13 @@ package com.welldo.scalaStudy.chapter8.trait2;
  * 也就是说，多个类具有相同的特质（特征）时，就可以将这个特质（特征）独立出来，采用关键字trait声明。
  * trait = 抽象类+接口
  *
+ *
+ *
+ * son类继承了father类, 如果father实现了某个接口, 那么son类也能使用;
+ * 假如用户需求是 仅仅希望father类有某个方法, son类没有, 怎么做呢?
+ * 答案1: 让father类继承 trait即可
+ * 答案2: 动态混入(后面详讲)
+ *
  * author: welldo
  * date: 2019/12/8 17:10
  */
