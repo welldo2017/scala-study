@@ -1,4 +1,4 @@
-package com.welldo.scalaStudy.chapter8.trait2
+package com.welldo.scalaStudy.chapter8.trait3
 
 /**
   * 特质的快速入门

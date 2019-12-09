@@ -1,4 +1,4 @@
-package com.welldo.scalaStudy.chapter8.trait2
+package com.welldo.scalaStudy.chapter8.trait3
 
 /**
   * 在scala中，java中的接口可以当做特质使用
