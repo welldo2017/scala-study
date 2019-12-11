@@ -98,7 +98,7 @@ ssh-keygen -t rsa -C 你的邮箱
 ========================================
 查看日志(无法看到回滚记录):
 	git log 					(完整模式)
-	git log  --pretty=oneline	(一行模式)
+	git log  --pretty=oneline	(一行模式+完整版本号)
 	git log  --pretty=oneline --abbrev-commit (一行模式+精简版本号)
 	git log -数字 	(查看最近n次提交)
 
