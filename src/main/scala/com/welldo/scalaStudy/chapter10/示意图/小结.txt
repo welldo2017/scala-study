@@ -4,7 +4,7 @@ Scala不可变集合
 1. Java中也有Set、Map
 2. Java没有Seq，List归属到Seq了,因此这里的List就和java中的List不是同一个概念了
 3. for循环,就是IndexedSeq 下的Vector
-4. String也是属于IndexeSeq
+4. String也是属于IndexSeq, (string 是 char的集合)
 6. Scala中的Map体系有一个SortedMap,说明Scala的Map可以支持排序
 7. IndexSeq 和 LinearSeq 的区别
     [IndexSeq是通过索引来查找和定位，因此速度快，比如String，通过索引即可定位]
