@@ -1,0 +1,14 @@
+
+144开始
+
+1) 在Scala中, 几乎所有的集合类, 有可变（mutable）和不可变（immutable）两种类型。
+
+2)两个主要的包：
+    不可变集合：scala.collection.immutable(默认)
+    可变集合：  scala.collection.mutable
+
+    1)不可变集合: 本身不能动态变化,不是内容不能变化。(类似java的数组，是不可以动态增长的, 是线程安全的, 效率更高,优先选择)
+    2)可变集合: 本身可以动态变化的。(比如:ArrayList , 是可以动态增长的)
+
+4)Scala的集合有三大类：序列Seq、集Set、映射Map，所有的集合都扩展自Iterable特质，
+
