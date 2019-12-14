@@ -13,12 +13,24 @@ package com.welldo.scalaStudy.chapter10.tuple4
   * 5. 元组是scala推荐使用，在java没有
   *
   * @author welldo
-  * date 2019/12/12
+  *         date 2019/12/12
   */
 object Demo1 {
-  def main(args: Array[String]): Unit = {
+    def main(args: Array[String]): Unit = {
+        //1. 创建
+        val myTuple = (1, 2, "hello")
 
+        //2. 访问: 使用下划线
+        println(myTuple._1 + ", " + myTuple._2 + ", " + myTuple._3)
+        println("==================")
 
-  }
+        //2. 访问: 使用productElement(index), 索引从0开始
+        println(myTuple.productElement(2))
+        println("==================")
+
+        //2. 访问: 迭代器
+        val iterator = myTuple.productIterator
+        iterator.foreach(println)
+    }
 
 }
