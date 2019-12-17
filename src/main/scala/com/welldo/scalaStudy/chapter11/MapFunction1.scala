@@ -18,10 +18,7 @@ object MapFunction1 {
         println(newList)
 
         //2. 非传统
-        //引出 map函数, 此函数是高阶函数
-        // (能接收函数作为参数的函数,叫做高阶函数, 请看示例  HighOrderFunction1
-
-
-
+        //引出 map函数, 此map不是 之前的Map集合, 这里的map是一个函数, 并且是高阶函数
+        // 能接收函数作为参数的函数,叫做高阶函数, 请看 HighOrderFunction2.scala
     }
 }
