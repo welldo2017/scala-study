@@ -1,4 +1,4 @@
-package com.welldo.scalaStudy.chapter11
+package com.welldo.scalaStudy.chapter11.introduction1
 
 /**
   * 要求：请将List(3,5,7) 中的所有元素都 * 2 ，

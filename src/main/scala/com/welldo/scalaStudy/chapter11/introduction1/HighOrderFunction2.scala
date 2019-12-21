@@ -1,4 +1,4 @@
-package com.welldo.scalaStudy.chapter11
+package com.welldo.scalaStudy.chapter11.introduction1
 
 /**
   * 何为高阶函数?

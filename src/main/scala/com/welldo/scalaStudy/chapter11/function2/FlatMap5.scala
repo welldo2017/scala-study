@@ -1,4 +1,4 @@
-package com.welldo.scalaStudy.chapter11
+package com.welldo.scalaStudy.chapter11.function2
 
 /**
   * flatmap映射：flat即压扁，压平，扁平化映射

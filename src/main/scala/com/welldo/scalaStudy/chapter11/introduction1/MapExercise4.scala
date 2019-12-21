@@ -1,4 +1,4 @@
-package com.welldo.scalaStudy.chapter11
+package com.welldo.scalaStudy.chapter11.introduction1
 
 /**
   * 请将 val names = List("Alice", "Bob", "Nick") 中的所有单词，全部转成字母大写，

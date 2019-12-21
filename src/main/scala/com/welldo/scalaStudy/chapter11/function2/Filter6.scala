@@ -1,4 +1,4 @@
-package com.welldo.scalaStudy.chapter11
+package com.welldo.scalaStudy.chapter11.function2
 
 /**
   * filter 过滤(使用频率很高)

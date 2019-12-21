@@ -1,9 +1,9 @@
-package com.welldo.scalaStudy.chapter11
+package com.welldo.scalaStudy.chapter11.function3
 
 /**
-  * reduece
+  * 递归思想的函数之一: reduce
   * def reduceLeft[B >: A] (f: (B, A) => B): B
-  * reduceleft接收两个参数, 运算后得到的结果, 和第3个参数继续运算,
+  * reduceLeft接收两个参数, 运算后得到的结果, 和第3个参数继续运算,
   * 运算后得到的结果, 和4个参数继续运算....以此类推
   *
   * tips: 上述高阶函数的参数样式, 以后遇到类似的, 则执行流程也差不多
