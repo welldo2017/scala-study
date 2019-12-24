@@ -1,4 +1,4 @@
-package com.welldo.scalaStudy.chapter8.mixin4
+package com.welldo.scalaStudy.chapter8.mixin5
 
 /**
   * 动态混入(mix in)
