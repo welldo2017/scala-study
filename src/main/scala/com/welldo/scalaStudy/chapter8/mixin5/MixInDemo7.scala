@@ -47,4 +47,4 @@ class UnhappyException2 extends IndexOutOfBoundsException with LoggedException
 
 //3. 无法通过.
 class CCC
-class UnhappyException3 extends CCC with LoggedException
+//class UnhappyException3 extends CCC with LoggedException    //这行代码无法通过
