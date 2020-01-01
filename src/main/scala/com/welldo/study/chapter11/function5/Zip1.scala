@@ -1,4 +1,4 @@
-package com.welldo.study.chapter11.function4
+package com.welldo.study.chapter11.function5
 
 /**
   * 拉链
@@ -16,13 +16,13 @@ object Zip1 {
     def main(args: Array[String]): Unit = {
 
         //拉链的基本使用-合并
-        val list = List("no1", "no2", "no3") // 文件
-        val list2 = List("北京", "上海", "广州") // 数据库
+        val list = List("no1", "no2", "no3")
+        val list2 = List("北京", "上海", "广州")
 
         val list3 = list zip list2
         println(list3)
 
-        //结果遍历
+        //结果遍历, 由于是 对偶元祖,所以用 _1, _2 来取值
         for (item <- list3) {
             println("编号=" + item._1 + ", 名字=" + item._2)
         }

@@ -1,4 +1,4 @@
-package com.welldo.study.chapter11.function3
+package com.welldo.study.chapter11.exercise4
 
 import scala.collection.mutable.ArrayBuffer
 
@@ -9,7 +9,7 @@ import scala.collection.mutable.ArrayBuffer
   * 将sentence 中每个字符，通过 foldLeft 存放到 一个ArrayBuffer中
   * 目的：理解 foldLeft 的用法.
   *
-  * author: welldo 
+  * author: welldo
   * date: 2019/12/21 15:14
   */
 object comprehensiveExercise1 {
