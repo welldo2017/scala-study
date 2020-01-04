@@ -22,19 +22,18 @@ object MatchDemo7 {
         else if(a == 8) Array("aa","bb")
 
 
-        // 这里用到了MatchDemo5 模式中的中变量
         val result = obj match {
+            //类型匹配成功就行, 忽略变量obj的值, 这里不是默认匹配
             case _ : BigInt => {
-                println("_")
-                Int.MaxValue //这里只要是BigInt 就行, 表示忽略匹配的变量值, 这里不是默认匹配
+                println("忽略变量值")
+                Int.MaxValue
             }
+
+            //类型匹配成功就行, 并且用变量a 来接收变量obj的值(下同)
             case a : Int => a
             case b : Map[String, Int] => "字符串-数字 Map"
             case c : Map[Int, String] => "数字-字符串 Map"
-            case d : Array[String] => {
-                println(d.mkString(","))
-                "字符串数组"
-            }
+            case d : Array[String] => {  "字符串数组" }
             case e : Array[Int] => "数字数组"
             case f : BigInt => {
                 println(f)
