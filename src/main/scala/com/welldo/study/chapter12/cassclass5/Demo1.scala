@@ -9,6 +9,7 @@ package com.welldo.study.chapter12.cassclass5
   * 3. 样例类会实现Serializable接口
   *
   * 4)构造器中的每一个参数都成为val——除非它被显式地声明为var（不建议这样做）
+  * 编译后 是private final
   *
   * 5)在样例类对应的伴生对象中提供apply方法
   * 6)提供unapply方法让模式匹配可以工作, 也就是说, 样例类是为 模式匹配(对象) 而优化的类

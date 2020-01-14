@@ -2,6 +2,7 @@ package com.welldo.study.chapter12.cassclass5
 
 /**
   * 样例类最佳实践2: copy方法, tostring方法
+  * copy方法,会创建一个与现有对象值相同的新对象 ，并可以通过带名参数来修改某些属性
   *
   * author : welldo 
   * date : 2020/1/11 17:02
