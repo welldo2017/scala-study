@@ -17,20 +17,23 @@ git config --global user.email
 如果没有, 则用下列命令进行创建
 ssh-keygen -t rsa -C 你的邮箱
 
+
+
 ========================================
 查看所有分支:(当前分支前, 会标一个*号)
 	git branch (只有完成第一次提交之后, 才能看到master分支)
-
-创建并切换分支:
-	git checkout -b 分支名字 (容易和撤销修改混淆,不推荐)
-	git switch -c 分支名字 (-c 即 create)
+	git branch -a 查看所有分支：包括远程分支
 
 创建分支:
 	git branch  分支名字
 
 切换分支:
-	git checkout 分支名字(容易和撤销修改混淆,不推荐)
+	git checkout 分支名字(容易和 检出混淆,不推荐)
 	git switch  分支名字
+
+创建并切换分支:
+	git checkout -b 分支名字 (容易和撤销修改混淆,不推荐)
+	git switch -c 分支名字 (-c 即 create)
 
 删除分支:
 	git branch -d 分支名字
@@ -45,46 +48,61 @@ ssh-keygen -t rsa -C 你的邮箱
 		git merge --no-ff -m "merge with no-ff" 其他某分支名字
 		(因为本次合并要创建一个新的commit，所以加上-m参数，把commit描述写进去)
 
+*** 提示：一定要学会看分支合并图
 
 
 ========================================
 初始化(新建仓库):
-	git init
+	git init	(目录下多出 .git 文件夹)（并且自动创建第一个分支 master）
+
+	----工作区--------			----暂存区--------		----某分支--------
+	|				|			|				|		|	版本1		|
+	|写代码的地方		| add		|				| commit|	版本2		|
+	|代码文件		| ====>		|				| ====>	|	版本3		|
+	|				|			|				|		|				|
+	|				| restore	|				|		|				|
+	|				| --stage	|				|		|				|
+	|				| <====		|				|		|				|
+	|				|			|				|		|				|
+	|				| diff		|				|		|				|
+	|				| <==>		|				|		|				|
+	|				|			|				|		|				|
+	-----------------			-----------------		-----------------
+
+
 
 创建文件, 并进行编辑后,
 查看所有仓库下的文件编辑状态:
 	git status:
-		untracked file: 表示新创建的,在工作区 (需要手动提交到暂存区)
-		modified(红色): 被修改,在工作区 (需要手动提交到暂存区)
-		modified(绿色): 被修改 (已经提交到暂存区)
+		untracked file: 新创建的,	在工作区 (需要手动提交到暂存区)
+		modified(红色): 被修改,		在工作区 (需要手动提交到暂存区)
+		modified(绿色): 被修改 				(已经提交到暂存区)
 
 
 
-将工作区的文件添加到 暂存区:
-	git add 文件名 (添加指定的 修改过的文件)
-	git add .	  (添加全部 修改过的文件)
-	git a . 		(添加全部 修改过的文件, 并且还git status)
+|将工作区的文件添加到 暂存区:
+|	git add 文件名 (添加指定的 修改过的文件)
+|	git add .	  (添加全部 修改过的文件)
+|
+|将暂存区的修改, 撤回到工作区:
+|	git restore --staged 文件名  
+|
+|撤销修改:
+|		工作区的文件: 被修改后，还未add到暂存区，(也就是说，仅仅在工作区玩儿)
+|		git restore 文件名 （相当于 ctrl + Z）
+|			也可以用git checkout -- file，其实是 检出版本库里的版本,替换工作区的版本
+|			（命令中没有 -- ，就是切换分支，容易混淆，不推荐）
 
 
 将暂存区的文件 进行提交
-	git commit :					(会进入到一个编辑区,用来填写提交信息)
+	git commit :					(会进入到vim, 用来编辑提交信息)
 	git commit -m "first commit" :	提交+填写提交信息,一次完成
 	(********** 提交的是更改, 不是文件 **********)
 
-查看修改内容:(对比 工作区中的文件A 和 仓库中的文件A 的差异)
-	git diff 文件名
+查看修改内容:
+	git diff 文件名		：工作区的修改 和 暂存的修改 		的差异
+	git diff HEAD 文件名	：工作区的修改 和 版本库的最新版本	的差异
 
-
-撤销修改(两种情况):
-	git checkout -- 文件名
-		1.工作区的文件: 被修改后，撤销修改,就回到和版本库一模一样的状态;
-		(git checkout其实是 检出版本库里的版本,替换工作区的版本)
-		2.暂存区的文件: 被修改后，撤销修改, 就回到 刚刚添加到暂存区时的状态
-	(********** 命令中的 -- 很重要，没有--，就变成了“切换到另一个分支” **********)
-
-
-将暂存区的文件, 撤回到工作区:
-	git reset HEAD 文件名
 
 
 删除(被添加到版本库中的)文件后:
@@ -113,7 +131,8 @@ ssh-keygen -t rsa -C 你的邮箱
 
 
 ========================================
-回滚:
+回滚某分支上的版本:
+	(HEAD 指向的版本，就是当前版本)
 	git reset --hard HEAD~1 	回滚上1个
 	git reset --hard HEAD~2 	回滚上2个
 	git reset --hard HEAD~100 	回滚上100个
@@ -202,7 +221,7 @@ git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Crese
 ========================================
 1.先有本地库，后有远程库的时候，如何关联远程库。
 	1.1 在本地仓库下运行下列命令，把本地库与远程库关联：
-		git remote add origin https://github.com：你的github用户名/仓库名字
+		github 页面会有命令，直接拷贝即可（ssh协议最快，推荐使用）。这里不列出
 		添加后，远程库的名字就是origin，这是Git默认的叫法，也可以改成别的
 
 
@@ -210,7 +229,7 @@ git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Crese
 		git push -u origin master
 
 		(由于远程库是空的，我们第一次推送master分支时，
-		加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，
+		加上了-u参数，Git不但会把本地的master分支内容，推送到远程新的master分支，
 		还会把本地的master分支和远程的master分支关联起来，以后的推送或者拉取时就可以简化命令)
 
 		从现在起，只要本地作了提交，就可以通过命令
@@ -231,7 +250,7 @@ git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Crese
 ========================================
 2.先有远程库，再克隆远程库
 	2.1 在github上创建一个库（记得☑️生成 readme.md 选项）
-	2.2 点击"clone or download"按钮,生成项目地址链接(https/ssh 可选)
+	2.2 点击"clone or download"按钮,生成项目地址链接(https/ssh（最快） 可选)
 		git clone 项目地址链接
 
 
