@@ -48,8 +48,35 @@ ssh-keygen -t rsa -C 你的邮箱
 		git merge --no-ff -m "merge with no-ff" 其他某分支名字
 		(因为本次合并要创建一个新的commit，所以加上-m参数，把commit描述写进去)
 
-*** 提示：一定要学会看分支合并图
+	tips: 从本质上说git分支都是个名字，没有主次之分,所以谁合并谁，过程都是一样的。
 
+
+其他分支：
+	git clone/ git pull后，默认情况下，只能看到本地的master分支
+	
+	1.直接建立链接
+		想在dev分支上开发，就必须创建远程origin/dev分支到本地
+		git checkout -b dev origin/dev
+		git checkout -b 本地分支名 origin/远程分支名
+
+	2.本地新建了一个dev，代码写了很多了，才发现是基于origin/master创建的dev
+	直接 git push origin dev 推送的话，会推送到master
+	
+	这个本地dev如何和远程dev关联呢？
+	git branch --set-upstream-to=origin/dev dev
+	git branch --set-upstream-to=origin/远程分支名 本地分支名
+	提示信息为：
+	Branch 'devv' set up to track remote branch 'dev' from 'origin'.
+
+	再推送即可
+
+
+
+
+
+
+********
+	提示：一定要学会看分支合并图
 
 ========================================
 初始化(新建仓库):
