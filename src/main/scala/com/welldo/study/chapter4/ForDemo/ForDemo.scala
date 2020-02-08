@@ -13,8 +13,7 @@ object ForDemo {
     * 3) to 是关键字,   x to y,表示从x到y ,左闭右闭
     *   until 是关键字, x to y,表示从x到y ,左闭右开
     *
-    * 4) i将会从 1开始循环,到3结束
-    * 5) 这里的 1 to 3 也可以是一个集合
+    * 5) 这里的 NumA to NumB 也可以是一个集合
     */
   def main(args: Array[String]): Unit = {
 

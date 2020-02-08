@@ -8,7 +8,7 @@ package com.welldo.study.chapter14.test
   * @author : welldo
   * date : 2020-02-08 18:00
   */
-object Demo1 {
+object DemoA1 {
     def main(args: Array[String]): Unit = {
         var count: BigInt = BigInt(1)
         var endNum: BigInt = BigInt(10000000L)
