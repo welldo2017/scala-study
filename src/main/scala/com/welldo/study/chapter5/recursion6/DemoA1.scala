@@ -1,4 +1,4 @@
-package com.welldo.study.chapter14.test
+package com.welldo.study.chapter5.recursion6
 
 /**
   * scala中循环不建议使用while和do...while,而建议使用递归
