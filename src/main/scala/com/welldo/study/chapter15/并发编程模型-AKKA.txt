@@ -1,0 +1,90 @@
+
+并发编程模型-AKKA
+
+一。是什么？
+
+	1)Akka是JVM上构建高并发、分布式和容错应用的工具包
+		简单说：Akka是编写并发程序的框架。
+
+	2)Akka用Scala语言写成，同时提供了Scala和JAVA的接口。
+
+	3)Akka主要解决的问题是：
+		可以轻松的写出高效稳定的并发程序，程序员不再过多的考虑线程、锁和资源竞争等细节。
+
+
+二。为什么存在？
+
+	1)处理并发问题的关键，是要保证共享数据的一致性和准确性，
+	因为多线程时，多个线程对同一个数据进行修改，若不加同步条件，势必会造成数据污染。
+	但是当我们对关键代码加入同步条件synchronized 后，
+	实际上大并发就会阻塞在这段代码，对程序效率有很大影响。
+
+	2)若是用单线程处理，不会有数据一致性的问题，但是系统的性能又不能保证。
+
+	3)Actor 模型的出现解决了这个问题，简化并发编程，提升程序性能。 
+	Actor 模型是一种处理并发问题的解决方案，很牛!
+
+
+三。akka中的actor模型
+
+	1)Akka 处理并发的方法基于 Actor 模型。(示意图1)
+
+	1)Actor模型是异步、非阻塞、高性能的,事件驱动编程模型
+
+	2)在Actor system里，所有的事物都是 Actor
+
+	3)Actor 与 Actor 之间只能通过消息通信
+		[消息的发送必须通过ActorRef 发送]，如图的信封.
+
+	4)Actor 与 Actor 之间只能通过消息通信，
+		当一个 Actor 给另外一个 Actor发消息，消息是有顺序的(消息队列)，
+		只需要将消息投寄到相应的邮箱即可。
+
+	5)怎么处理消息，是由接收方Actor决定的；发送方Actor可以等待回复，也可以异步处理。
+
+	6)ActorSystem 的职责，是负责创建（通过工厂模式）并管理Actor， 
+	ActorSystem 是单例的，一个 JVM 进程中近一个，Acotr 可以多个。
+
+	9)Actor模型是轻量级的（1GB 内存可容纳百万级 Actor），因此并发性能高.
+
+
+四。actor模型工作机制（示意图2）
+		
+	1)ActorySystem创建Actor
+
+	1)A Actor要想给B Actor 发送消息，那么A Actor 要先拿到B Actor 的代理对象B-ActorRef
+
+	2)ActorRef:可以理解成是Actor的代理或者引用。
+	消息是通过ActorRef来发送,	而不是通过Actor 发送消息，
+	通过哪个ActorRef 发消息，就表示把该消息发给哪个Actor。
+
+	3) ActorRef把消息发送到Dispatcher Message (消息分发器)，
+	它得到消息后，会将消息分发到对应的MailBox。
+	(注: Dispatcher Message 可以理解成是一个线程池, 
+	MailBox 可以理解成是消息队列，可以缓冲多个消息，遵守FIFO)
+	Actor 可以通过 receive方法来获取消息，然后进行处理。
+
+	4)一个消息就是一个Message对象。Message 继承了Runable， 因此Message就是线程类。
+
+	5)Actor模型工作机制，看上去很麻烦，但是程序员编程时只需要编写Actor就可以了，
+	其它的交给Actor模型完成即可。
+
+五。actor模型快速入门
+	上代码。
+
+
+六.缺点分析
+    https://www.zhihu.com/question/279512440
+
+
+	
+
+
+
+
+
+
+
+
+
+
