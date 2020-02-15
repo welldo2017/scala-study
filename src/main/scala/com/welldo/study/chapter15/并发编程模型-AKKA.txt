@@ -71,6 +71,7 @@
 
 五。actor模型快速入门
 	上代码。
+	文档: https://doc.akka.io/docs/akka/2.6/typed/guide/introduction.html
 
 
 六.缺点分析
