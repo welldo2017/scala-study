@@ -26,6 +26,8 @@ object Demo1 {
 
     def mul(x: Int, y: Int): Int = x * y
 
+    //def mulCurry(x: Int): Int => Int ={ (y: Int) => x * y}
+    //简写,省略{}
     def mulCurry(x: Int): Int => Int = (y: Int) => x * y
 
     def mulCurry2(x: Int)(y: Int): Int = x * y

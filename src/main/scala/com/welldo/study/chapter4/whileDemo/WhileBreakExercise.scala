@@ -5,7 +5,10 @@ package com.welldo.study.chapter4.whileDemo
   * date: 2019/11/17 18:16
   *
   * 20以内的数求和，求出 当和 第一次大于20的当前数是多少?
-  * 请使用循环守卫和breakable，完成break的效果
+  * 请使用循环守卫和 breakable，完成break的效果
+  *
+  * breakable: 这里的控制权转移是通过抛出和捕获异常完成的，尽量避免使用这套机制
+  * 循环守卫: 简单易懂. 推荐这种
   */
 
 import scala.util.control.Breaks._

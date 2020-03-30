@@ -1,5 +1,7 @@
 package com.welldo.study.chapter4.whileDemo
 
+import scala.util.control.Breaks._
+
 /**
   * author: welldo 
   * date: 2019/11/17 18:16
@@ -14,11 +16,28 @@ package com.welldo.study.chapter4.whileDemo
 
 object WhileContinue {
 
-  def main(args: Array[String]): Unit = {
-    for(i <- 1 to 3 if i != 2) {
-      println(i )
+    def main(args: Array[String]): Unit = {
+
+        //使用循环守卫, 实现continue
+        for (i <- 1 to 3 if i != 2) {
+            println(i)
+        }
+
+
+        val list = List(21, 214, -4352, 65436, 7534)
+        println("breakable语句块来实现continue操作")
+        for (elem <- list) {
+            breakable {
+                if (elem < 0) break else println(elem)
+            }
+        }
+
+        println("if else控制来实现continue操作")
+        for (elem <- list) {
+            if (elem < 0) () else println(elem)
+        }
+
     }
-  }
 
 
 }
