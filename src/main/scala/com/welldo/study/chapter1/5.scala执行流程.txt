@@ -38,6 +38,8 @@ object Hello {
 
 4. 一个object A, 编译后为什么有两个 class文件?
 	在java中, 有些不是oop(面向对象)的范畴, 比如8种基本数据类型, 比如静态.
+	（涉及到伴生类，伴生對象的概念，此处可以先忽略。
+	具体会在 com.welldo.study.chapter8.static1 中讲解）
 
 
 

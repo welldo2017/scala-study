@@ -19,10 +19,6 @@ object Demo2 {
     a = a - b //10 + 20 -10
     printf("a=%d, b=%d\n", a, b)
 
-    //方法2(位运算符)
-    //todo
-
-
   }
 
 

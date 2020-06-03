@@ -21,7 +21,6 @@ class FirstActor extends Actor{
       * @return 返回值是 type Receive = PartialFunction[Any, Unit]. 即使一个偏函数
       */
     override def receive: Receive = {
-        // todo 偏函数需要复习
         case "1" => println("收到了1")
         case "2" => println("收到了2")
 

@@ -3,9 +3,11 @@ package com.welldo.study.chapter3.input6
 import scala.io.StdIn
 
 /**
-  * @author welldo 
-  *         2019/11/17
-  *         在编程中，需要接收用户输入的数据，就可以使用键盘输入语句来获取。InputDemo.scala
+  * 在编程中，需要接收用户输入的数据，就可以使用键盘输入语句来获取
+  *
+  * author welldo
+  * 2019/11/17
+  *
   */
 object InputDemo {
 

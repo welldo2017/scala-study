@@ -1,14 +1,13 @@
 package com.welldo.study.chapter3.arithmetic1
 
 /**
-  * @author welldo 
-  *         2019/11/17
-  **/
+  * Scala中没有++、--操作符，需要通过+=、-=来实现同样的效果
+  *
+  * author welldo
+  * 2019/11/17
+  */
 object Arithmetic3 {
 
-  /**
-    * Scala中没有++、--操作符，需要通过+=、-=来实现同样的效果
-    */
   def main(args: Array[String]): Unit = {
     var i = 10
 

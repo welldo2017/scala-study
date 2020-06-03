@@ -1,13 +1,13 @@
 package com.welldo.study.chapter8.static1
 
 /**
-  * 1. 在同一个文件中, 有同名的class 和object,那么他俩就是半生关系(也就是说, 伴生类和伴生对象一一对应)
+  * 1. 在同一个文件中, 有同名的class 和object,那么他俩就是伴生关系(也就是说, 伴生类和伴生对象一一对应)
   * 2. class ScalaPerson 是伴生类, 将非静态的内容,定义在该类
   *         编译后, 底层是ScalaPerson.class
   * 3. object ScalaPerson 是伴生对象, 将静态的内容,定义在该对象中
   *         编译后, 底层是ScalaPerson$.class
-  * 4. 对于半生对象的属性/方法, 可以直接通过对象名来调用
-  *         调用时,在底层,是直接调用半生对象, 暂时没有和半生类发生关联
+  * 4. 对于伴生对象的属性/方法, 可以直接通过对象名来调用
+  *         调用时,在底层,是直接调用伴生对象, 暂时没有和伴生类发生关联
   *
   * 5. 从底层原理看，伴生对象实现静态特性是依赖于 public static final  MODULE$ 实现的。
   *
