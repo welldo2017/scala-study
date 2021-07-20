@@ -26,7 +26,7 @@ object ClosureDemo2 {
       * 接收一个后缀名, 并返回一个闭包
       */
     def makeSuffix(suffix: String) = {
-        (fileName:String) => {
+        fileName:String => {
             if (fileName.endsWith(suffix))
                 fileName
             else

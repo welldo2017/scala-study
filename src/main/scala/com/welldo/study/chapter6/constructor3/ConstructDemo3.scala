@@ -20,11 +20,12 @@ object ConstructDemo3 {
     //person31. 无法调用name属性, 因为仅仅是个局部变量
 
     val person32 = new Person32("li4")
-    person32.name     //可以get
+    println(person32.name)     //可以get
     //person32.name = "sss"   //无法重新赋值, 因为只读
 
     val person33 = new Person33("wagnd5")
     person33.name = "sss"   //可以重新赋值
+    println(person33.name)
 
   }
 }

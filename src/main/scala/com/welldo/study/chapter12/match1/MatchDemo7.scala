@@ -14,7 +14,7 @@ object MatchDemo7 {
 
         val obj = if(a == 1) 1      //1
         else if(a == 2) "2"                //啥也不是
-        else if(a == 3) BigInt(3)           //
+        else if(a == 3) BigInt(3)           //2147483647
         else if(a == 4) Map("aa" -> 1)
         else if(a == 5) Map(1 -> "aa")
         else if(a == 6) Array(1, 2, 3)
@@ -23,7 +23,8 @@ object MatchDemo7 {
 
 
         val result = obj match {
-            //类型匹配成功就行, 忽略变量obj的值, 这里不是默认匹配
+            //变量由两部分组成,类型+值
+            //这里只匹配类型, 类型匹配成功就行, 忽略变量obj的值(!!!特别注意这个下划线,不是默认匹配)
             case _ : BigInt => {
                 println("忽略变量值")
                 Int.MaxValue

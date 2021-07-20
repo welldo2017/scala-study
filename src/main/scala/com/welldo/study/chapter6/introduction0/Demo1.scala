@@ -11,13 +11,14 @@ package com.welldo.study.chapter6.introduction0
   */
 object Demo1 {
   def main(args: Array[String]): Unit = {
-
   }
 
 }
 
-//cala语法中，类并不声明为public，
-// 所有这些类都具有公有可见性 (即默认就是public,所以手动加上public是画蛇添足),[修饰符在后面再详解].
+/**
+  * scala语法中，类并不声明为public，
+  * 所有这些类都默认具有公有可见性 (手动加上public是画蛇添足),
+  * [修饰符在后面再详解].
+  */
 class HowDefine {
-
 }

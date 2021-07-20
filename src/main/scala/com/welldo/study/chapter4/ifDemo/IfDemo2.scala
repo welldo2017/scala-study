@@ -12,7 +12,13 @@ object IfDemo2 {
 
     //这时,没有进入到if的逻辑中, 则会返回 Unit的实例: () 一对小括号
     val age = 10
-    val result = if (age > 18) {
+    val result = if (age > 18) {//返回值类型string
+      "已经成年"
+    }else{
+      "未成年"
+    }
+
+    val result2 = if (age > 18) {//返回值类型any
       "已经成年"
     }
 

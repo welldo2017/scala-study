@@ -4,9 +4,8 @@ package com.welldo.study.chapter6.constructor3
   * Scala类的构造器包括： 主构造器（一个） 和 辅助构造器(多个)
   *
   * Scala构造器的基本语法:
-  *   1. class 类名(形参列表) {  // 主构造器
-  *
-  *   2. def  this(形参列表) {  // 辅助构造器的名字为 this
+  * class 类名(形参列表) {              // 主构造器
+  *     def  this(形参列表) {  。。。}   // 辅助构造器的名字为 this
   * }
   *
   * author: welldo 
@@ -22,12 +21,8 @@ object ConstructDemo1 {
   }
 }
 
-/**
-  * Scala构造器作用是完成对新对象的初始化，构造器没有返回值。
-  *
-  * 1.主构造器, 直接放置于类名之后
-  */
-class Person1(pName: String, pAge: Int) {
+//Scala构造器作用是完成对新对象的初始化，构造器没有返回值。
+class Person1(pName: String, pAge: Int) { //1.主构造器, 直接放置于类名之后
   var name: String = pName
   var age: Int = pAge
 

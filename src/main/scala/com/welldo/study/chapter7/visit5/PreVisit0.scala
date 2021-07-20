@@ -3,16 +3,17 @@ package com.welldo.study.chapter7.visit5
 /**
   * 可见性的前置知识
   *
-  * //说明一下伴生类和伴生对象关系
-  * //1. 如果我们在同一个文件中，写了 class PreVisit 和  object PreVisit
-  * //   就把 class Clerk 称为 伴生类， object Clerk 称为伴生对象
+  * 说明一下伴生类和伴生对象关系
+  * 1. 如果我们在同一个文件中，写了 class PreVisit 和  object PreVisit
+  *    就把 class Clerk 称为 伴生类， object Clerk 称为伴生对象
+  *    互为伴生。
   *
-  * //2. 如果我们在同一个文件中，只写了 class PreVisit ，那么Clerk就是一个普通的类
+  * 2. 如果我们在一个文件中，只写了 class PreVisit ，那么Clerk就是一个普通的类
   *
-  * //3. 如果我们在同一个文件中，只写了 object Clerk,
+  * 3. 如果我们在一个文件中，只写了 object Clerk,
   * 那么在底层就会自动生成对应的伴生类 class Clerk, 只是这个伴生类是空..
   *
-  * //4. 伴生对象，可以访问到伴生类的 任何 方法和属性 (注意: 是任何)
+  * 4. 伴生对象，可以访问到伴生类的 任何 方法和属性 (注意: 是任何)
   *
   * 为什么要这样设计???
   * 因为scala设计者,认为 static 不是面向对象,但是要和jvm无缝接轨,所以做了一些转变, 设计了伴生概念

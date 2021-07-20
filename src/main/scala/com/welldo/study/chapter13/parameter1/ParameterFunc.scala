@@ -12,7 +12,7 @@ object ParameterFunc {
   def main(args: Array[String]): Unit = {
     val list = List(3,5,7)
 
-    // HighOrderFunction3 中的代码, 这里的下户线 代表函数的引用
+    // HighOrderFunction3 中的代码, 这里的下划线 代表函数的引用
     val newList = list.map(muliple _)
     println(newList)
 

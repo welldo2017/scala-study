@@ -14,7 +14,7 @@ object Demo4 {
   def main(args: Array[String]): Unit = {
     val list = List(1, 2, 3, 4, "abc")
 
-    //创建一个偏函数
+    //1.创建一个偏函数,完整写法
     val pf = new PartialFunction[Any, Int] {
       override def isDefinedAt(x: Any): Boolean = {        x.isInstanceOf[Int]      }
 
@@ -24,7 +24,7 @@ object Demo4 {
     println(list2)
 
     /**
-      * 简写 (写成方法的形式)
+      * 2.偏函数的简写 (写成方法的形式)
       * Any为输入, int为输出
       * 遍历所有any, 如果这个any为int, 就执行 => 后面的逻辑
       */

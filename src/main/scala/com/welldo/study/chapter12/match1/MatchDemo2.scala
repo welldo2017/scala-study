@@ -11,6 +11,8 @@ package com.welldo.study.chapter12.match1
 object MatchDemo2 {
     def main(args: Array[String]): Unit = {
 
+        val bool= true
+
         for (ch <- "+-3!") {
             var sign = 0
             var digit = 0
@@ -18,8 +20,9 @@ object MatchDemo2 {
                 case '+' => sign = 1
                 case '-' => sign = -1
 
-                //1. 匹配守卫, 表示忽略 ch的值, 只判断if的条件表达式, 如果为true, 这一轮的ch 就匹配这里
-                case _ if false  => digit = 3
+                //1. 匹配守卫, 表示忽略 ch的值, 只判断if的条件表达式,
+                // 如果为true, 这一轮的ch 就匹配这里//如果为false,则还要往下走
+                case _ if bool => digit = 3
 
                 //默认匹配
                 case _ => sign = 2

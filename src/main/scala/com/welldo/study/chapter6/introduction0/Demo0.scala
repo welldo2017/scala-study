@@ -19,22 +19,14 @@ object Demo0 {
     cat.color="write"
     printf("%s,%d,%s",cat.name,cat.age,cat.color)
   }
-
 }
 
 /**
-  * 定义一个类
-  *
-  * 声明属性的时候, 必须要给初始值
-  *
+  * 定义一个类  * 声明属性的时候, 必须要给初始值
   * 编译后, 生成一个public的 class文件
-  * 对于每个属性, 比如 var name: String = "小黄"
-  *   会生成 private String name
-  *   会生成一对 public get set 方法
   */
 class Cat {
-  var name: String = "小黄"
+  var name: String = "小黄"//对于每个属性,会生成 private 类型 属性名,会生成一对 public get set 方法
   var age: Int = 5
   var color: String = "yellow"
-
 }

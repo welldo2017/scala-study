@@ -19,12 +19,14 @@ package com.welldo.study.chapter7.visit5
 object import2 {
 
   def main(args: Array[String]): Unit = {
+    //2.
+    import scala.collection.mutable._
+
     //3. 选择器
     import scala.collection.mutable.{ HashSet}
 
     //4. 重命名
     import java.util.{ HashMap=>JavaHashMap}
-    import scala.collection.mutable._
     var map = new HashMap() // 此时的HashMap指向的是scala中的HashMap
     var map1 = new JavaHashMap(); // 此时使用的java中hashMap的别名
   }

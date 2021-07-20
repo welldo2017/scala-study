@@ -12,8 +12,6 @@ package com.welldo.study.chapter7.extends6
   *         2019/12/2
   */
 object Demo1 {
-
-
 }
 
 //是一个Person类

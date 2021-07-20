@@ -7,7 +7,7 @@ package com.welldo.study.chapter6.introduction0
   * 3)Scala中声明一个属性,必须显示的初始化;
   *   初始化时, 可以根据属性值自动推断属性类型, 属性类型可以省略 [：类型]
   *
-  * 4)如果赋值为null,则一定要加类型;
+  * 4)如果不为Null类型的属性，要想赋值为null,则一定要加类型，不能使用自动推断;
   *   因为不加类型, 那么该属性的类型,就会被自动推断为Null类型.
   *
   * author: welldo 
@@ -25,13 +25,9 @@ object Demo2 {
 }
 
 class ClassDetail{
+  var age = 25//3.
 
-  //初始化时, 可以根据属性值自动推断属性类型, 属性类型可以省略 [：类型]
-  var age = 25
+  var name: String = null//4.
 
-  var name: String = null
-
-  //因为不加类型, 那么该属性的类型,就会被自动推断为Null类型.
-  var address = null
-
+  var address = null//4.
 }

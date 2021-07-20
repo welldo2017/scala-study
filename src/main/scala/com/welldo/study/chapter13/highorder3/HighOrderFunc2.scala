@@ -12,7 +12,7 @@ package com.welldo.study.chapter13.highorder3
   */
 object HighOrderFunc2 {
     def main(args: Array[String]): Unit = {
-        //调用匿名函数(分步)
+        //调用minus, 返回匿名函数(分步)
         val f1 = minus(10)
 
         println("分步调用======")
